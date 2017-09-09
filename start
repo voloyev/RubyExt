@@ -1,5 +1,10 @@
-#!/usr/bin/env ruby
-require './rubyext'
-include RubyExt
+#!/usr/bin/bash
 
-greetings
+echo "Build extension"
+echo "###############"
+ruby extconf.rb
+make
+echo "Build successful"
+printf "\n\n"
+printf "run ruby\n"
+./start_point.rb
